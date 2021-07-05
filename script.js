@@ -1,6 +1,7 @@
 const joke = document.getElementById('joke');
 const button = document.getElementById('button');
 
+// we use async await function to retrieve information from the web app Chuck Norris API and display it on the website
 async function getJoke() {
     const proxyUrl = "https://api.chucknorris.io/jokes/random";
     try {
@@ -19,11 +20,8 @@ async function getJoke() {
             joke.classList.remove('veryLongJoke');
         }
         joke.innerText = randomJoke;
-        console.log(randomJoke);
-        console.log(randomJoke.length);
     } catch (error) {
         getJoke();
-        console.log(error);
     }
 }
 
